@@ -1,0 +1,63 @@
+﻿@page
+@model YellowSalonWebsite.Pages.nailsModel
+@{
+
+
+ ViewData["Title"] = "Men's Hairstyles";
+
+    List<NailTypes> nails = new List<NailTypes>
+        {
+        new NailTypes { Name = "Acrylic and Gel Overlay ", Price = 300.00m, ImageUrl = "/Nails/acrylic_set.jpg" },
+        new NailTypes { Name = "French Tip Toes", Price = 200.00m, ImageUrl = "/Nails/french_tip_toes.jpg" },
+        new NailTypes { Name = "Plain Gelish", Price =150.00m, ImageUrl = "/Nails/plainnails.jpg" },
+        new NailTypes { Name = "Plain Acrylic", Price = 200.00m, ImageUrl = "/Nails/plain_acrylic.jpg" },
+        new NailTypes { Name = "Acrylic and Design", Price = 350.00m, ImageUrl = "/Nails/stileto_set.jpg" },
+        new NailTypes { Name = "Toes Gelish", Price = 150.00m, ImageUrl = "/Nails/toes.jpg" },
+        };
+   }
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <title>Document</title>
+            <link rel="stylesheet" href="~/css/Style.css" />
+            <style>
+                body {
+                    background-color: whitesmoke
+                }
+
+                .yellow-card {
+                    background-color: #fdcc04;
+                }
+
+                h1 {
+                    text-align: center;
+                    font-family: Arial;
+                }
+            </style>
+        </head>
+
+        <body>
+            </br>
+            </br>
+            <h1>Nails</h1>
+            <p style="text-align: center; font-family:Arial;">View the pricelist of our available nail styles.</p>
+
+    <div class="row">
+        @foreach (var nailType in nails)
+        {
+            <div class="col-md-4">
+                <div class="card mb-4 yellow-card rounded-2">
+                    <img src="@Url.Content(nailType.ImageUrl)" class="card-img-top" alt="@nailType.Name">
+                    <div class="card-body">
+                        <h5 class="card-title">@nailType.Name</h5>
+                        <p class="card-text">Price: R @nailType.Price</p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+        </body>
+    </html>

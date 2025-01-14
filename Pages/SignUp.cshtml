@@ -1,0 +1,149 @@
+﻿@page
+@model YellowSalonWebsite.Pages.SignUpModel
+@{
+}
+<head>
+    <link rel="stylesheet" href="~/css/Style.css" />
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        /* Full-width input fields */
+        input[type=text], input[type=email], input[type=password] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 22px 0;
+            display: inline-block;
+            border: none;
+            background: #f1f1f1;
+        }
+
+        input[type=text]:focus, input[type=email]:focus, input[type=password]:focus {
+            background-color: #ddd;
+            outline: none;
+        }
+
+        hr {
+            border: 1px solid #f1f1f1;
+            margin-bottom: 25px;
+        }
+
+        /* Set a style for all buttons */
+        button {
+            background-color: black;
+            color: white;
+            padding: 14px 15px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            opacity: 0.9;
+        }
+
+        button:hover {
+            opacity: 1;
+        }
+         
+        /* Extra styles for the cancel button */
+        .form_cancelbtn {
+            padding: 14px 20px;
+            background-color: #ffe135;
+        }
+
+        /* Float cancel and signup buttons and add an equal width */
+        .form_cancelbtn, .form_signupbtn {
+            float: left;
+            width: 50%;
+        }
+
+        /* Add padding to container elements */
+        .container {
+            padding: 16px;
+        }
+
+        /* Clear floats */
+        .form_buttons::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container" style="border:1px solid #ccc">
+        <form class="formSignUp" id="signUp">
+            <h1 class="form_title">Sign Up</h1>
+            <p>Please fill in this form to create an account.</p>
+            <hr>
+
+            <div class="form_input_group">
+                <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required>                  
+            </div>
+            <div class="form_input_group">
+                <label for="email"><b>Email</b></label>
+                <input type="email" placeholder="Enter Email" name="email" required>
+            </div>
+            <div class="form_input_group">
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+            </div>
+            <div class="form_input_group">
+                <label for="psw-confirm"><b>Confirm Password</b></label>
+                <input type="password" placeholder="Confirm Password" name="psw-confirm" required>
+            </div>
+
+            <div class="form_input_group">
+                <label>
+                    <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> 
+                    Remember me
+                </label>
+            </div>
+            <p>
+                By creating an account you agree to our 
+                <a href="#" style="color:dodgerblue">Terms & Privacy</a>.
+            </p>
+            <div class="form_buttons">
+                <button type="button" class="form_cancelbtn" id="cancelbtn">
+                    Cancel
+                </button>
+                <button type="submit" class="form_signupbtn" id="signupbtn">
+                    SignUp
+                </button>
+            </div>
+        </form>
+    </div>
+    
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyBkcmXeFgzEMiD0wmEZ23Qrk8A2_STtmfQ",
+            authDomain: "yellowsalon-2023.firebaseapp.com",
+            projectId: "yellowsalon-2023",
+            storageBucket: "yellowsalon-2023.appspot.com",
+            messagingSenderId: "447088551647",
+            appId: "1:447088551647:web:f97a5cd5e69a4f35da2b6a",
+            measurementId: "G-DELY3RDC62"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+    </script>
+</body>
+

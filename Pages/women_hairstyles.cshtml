@@ -1,0 +1,67 @@
+﻿@page
+@model YellowSalonWebsite.Pages.women_hairstylesModel
+@{
+    ViewData["Title"] = "Women's Hairstyles";
+
+    List<Hairstyle> hairstyles = new List<Hairstyle>
+    {
+        new Hairstyle { Name = "Box Braids", Price = 120.00m, ImageUrl = "/WomenHair/box-braids.jpg" },
+        new Hairstyle { Name = "Bob Weave", Price = 260.00m, ImageUrl = "/WomenHair/bob.jpg" },
+        new Hairstyle { Name = "Bob with Fringe", Price = 250.00m, ImageUrl = "/WomenHair/bob-with-fringe.jpg" },
+        new Hairstyle { Name = "Braids with Curls", Price =120.00m, ImageUrl = "/WomenHair/4-black.jpg" },
+        new Hairstyle { Name = "Cornrow Braids", Price = 130.00m, ImageUrl = "/WomenHair/cornrow-braids-into-a-side-bun.jpg" },
+        new Hairstyle { Name = "Crown Braids and Leaf Cornrows", Price = 140.00m, ImageUrl = "/WomenHair/crown-braids-and-leaf-cornrows.jpg" },
+        new Hairstyle { Name = "Curly Gel Waves", Price = 80.00m, ImageUrl = "/WomenHair/Curly_Waves_Gel_Hairstyle.jpg" },
+        new Hairstyle { Name = "Feed in Braids", Price = 140.00m, ImageUrl = "/WomenHair/Feed-in-Braids.jpg" },
+        new Hairstyle { Name = "S-Curls", Price = 40.00m, ImageUrl = "/WomenHair/s-curl.jpg" },
+        new Hairstyle { Name = "Short Buzz", Price = 40.00m, ImageUrl = "/WomenHair/short-buzz.jpg" },
+        new Hairstyle { Name = "Short Weave", Price = 180.00m, ImageUrl = "/WomenHair/short-weave.jpg" },
+        new Hairstyle { Name = "Wash and Dry", Price = 40.00m, ImageUrl = "/WomenHair/washdry.jpg" },
+    };
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="~/css/Style.css" />
+    <style>
+        body {
+            background-color: whitesmoke
+        }
+
+        .yellow-card {
+            background-color: #fdcc04;
+        }
+
+        h1 {
+            text-align: center;
+            font-family: Arial;
+        }
+    </style>
+</head>
+
+<body>
+    </br>
+    </br>
+    <h1>Women's Hairstyles</h1>
+    <p style="text-align: center; font-family:Arial;">View the pricelist of our women hairstyles.</p>
+
+    <div class="row">
+        @foreach (var hairstyle in hairstyles)
+        {
+            <div class="col-md-4">
+                <div class="card mb-4 yellow-card">
+                    <img src="@Url.Content(hairstyle.ImageUrl)" class="card-img-top" alt="@hairstyle.Name">
+                    <div class="card-body">
+                        <h5 class="card-title">@hairstyle.Name</h5>
+                        <p class="card-text">Price: R @hairstyle.Price</p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</body>
+</html>

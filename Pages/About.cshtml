@@ -1,0 +1,229 @@
+﻿@page
+@model YellowSalonWebsite.Pages.AboutModel
+@{
+}
+<html>
+    <head>
+    <link rel="stylesheet" href="~/css/Style.css" />
+
+    <style>
+
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+ background-color: #FFFFFF;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  color: #000;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #fdcc04;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #000;
+}
+
+.rec{
+            background-color: #1a1a1a;
+}
+
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Create two equal columns that floats next to each other */
+        .column1 {
+            float: left;
+            width: 50%;
+            padding: 10px;
+        
+        }
+
+        /* Clear floats after the columns */
+        .row1:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+</style>
+</head>
+<body>
+
+<div class="about-section">
+  <h1>About Us Page</h1>
+  <p>Yellow Salon specializes in style and beautification.The purpose of our application is to assist the customers in making their lives much easier scheduling appointments at the salon.</p>
+        <div>
+            <h6 style="text-align:center;">Yellow Salon has a team of skilled and experienced hairstylists who provide the best of modern styling techniques. They use advanced hair care products to create stunning looks that make you look and feel your best. They specialize in everything from trendy hairstyles for big events to creating the ultimate feel-good experience with a brand new look. Yellow Salon takes a modern approach by offering men and women's hairdressing services under one roof, yet keeping the barbering and hairdressing separate for a personalized experience for both men and women.</h6>
+
+        </div>
+</div>
+
+<h2 style="text-align:center">Team</h2>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="~/Sandi.jpeg" alt="Sandi" style="width:100%">
+      <div class="container">
+        <h2>lamo Sandi Linganiso </h2>
+         <p class="title">Developerr</p>
+          <p>As a full-stack developer with a passion for building impactful applications, my work focuses on using cutting-edge technologies to create intuitive and efficient systems that solve real-world problems.</p>
+        <p>ST10103852@rcconect.edu.za</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="~/Alfred.jpeg" alt="Alfred" style="width:100%">
+      <div class="container">
+       <h2>Alfred Mthethwa</h2>
+        <p class="title">Designer & Business Analyst </p>
+        <p>As a seasoned code designer, I have extensive experience creating innovative and effective code solutions that solve complex problems. My deep knowledge of programming languages such as Python, Java, and Ruby, has enabled me to design and implement cutting-edge algorithms that have been successfully deployed in a variety of industries.</p>
+        <p>ST10104046@rcconect.edu.za</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <img src="~/Chika.jpeg" alt="chika" style="width:100%">
+      <div class="container">
+      <h2>Chika Onyewuchi</h2>
+       <p class="title"> Software Developer</p>
+       <p>As a software development professional with extensive experience in various programming languages and platforms, I possess a diverse set of skills that spans across a wide range of industries.</p>
+        <p>ST10102515@rcconnect.edu.za</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+</div>
+<br /><br />
+<div class="Square">
+        <h2 style="text-align:center">Specialists</h2>
+        <h6 style="text-align:center;">
+            An online salon app is a software application that allows users to book appointments, manage their appointments, view the services offered by the salon, and get real-time updates on the status of their appointments. The app can also allow users to see reviews and ratings of the salon and its services by other users. The app can be used by both customers and salonists to make the booking and appointment management process more convenient and efficient.
+
+            The app can be used by customers to log in to their account and navigate through the various services offered by the salon. They can then choose the service they wish to book, select a date and time that is convenient for them, and make the booking. The app can also allow users to view their upcoming appointments and manage them by making changes to the date, time, or service chosen. The app also sends real-time notifications to users about the status of their appointments, such as reminders before the appointment date and time, and updates on any changes made to the booking.
+
+        </h6>
+
+</div>
+
+    <br />
+    <br />
+  <div>
+        <div class="rec"  >
+        <div class="row1">
+                <div class="column1" style="background-color:#1a1a1a;">
+                <img src="~/download.png" alt="chika" style="width:100%" style="height:200px">
+            </div>
+                <div class="column1" style="background-color:#1a1a1a;">
+                    <h2 style="  color: white;">App</h2>
+                    <p style="  color: white;">The app can be integrated with payment systems, allowing customers to pay for their appointments through the app, making the booking process faster and more convenient. The app can also be integrated with loyalty and rewards systems, allowing customers to earn points or rewards for their bookings, which can be used to redeem for discounts or other promotions offered by the salon.</p>
+            </div>
+        </div>
+        </div>
+  </div>
+  <br /><br />
+
+    <h3 style="text-align:center"> Team Specailist</h3>
+    <div class="row">
+        <div class="column">
+            <div class="card">
+                <img src="~/Tinx.jpeg" alt="Sandi" style="width:100%">
+                <div class="container">
+                    <h2>
+                        Tinyiko Maphalala
+                    </h2>
+                    <p class="title">Developerr</p>
+                     <p>
+    As a Project Manager, my role is to lead and manage projects from conception to completion. This involves coordinating teams, tracking progress, and overseeing budgets, deadlines, and milestones. I work closely with stakeholders, including clients, suppliers, and team members, to ensure that projects are delivered on time and within budget. Additionally, I utilize various tools and methods, such as Gantt charts, risk assessments, and change control, to ensure project success.
+                    </p>                   
+                    <p>ST10102493@rcconect.edu.za</p>
+                    <p><button class="button">Contact</button></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <img src="~/Team.jpeg" alt="Alfred" style="width:100%">
+                <div class="container">
+                    <h2>YSL DEVELOPERS</h2>
+                    <p class="title">Developers </p>
+                    <p>App was founded in 2023</p>
+                    <p>YSL@Developers.co.za</p>
+                    <p><button class="button">Contact</button></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <img src="~/Elaine.jpeg" alt="chika" style="width:100%">
+                <div class="container">
+                    <h2>
+                        Elaine Moobi
+                    </h2>
+                    <p class="title"> Data Analyst</p>
+                    <p>As a data analyst, my main responsibility is to collect, clean, and analyze data in order to provide meaningful insights and drive business decisions. I work with a variety of data sources, including databases, spreadsheets, and online platforms, and use advanced statistical techniques to extract valuable information.</p>
+                    <p>ST10102515@rcconnect.edu.za</p>
+                    <p><button class="button">Contact</button></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <br />
+</body>
+</html>

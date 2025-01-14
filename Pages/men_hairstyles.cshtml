@@ -1,0 +1,66 @@
+﻿@page
+@model YellowSalonWebsite.Pages.men_hairstylesModel
+@{
+    ViewData["Title"] = "Men's Hairstyles";
+
+    List<Hairstyle> hairstyles = new List<Hairstyle>
+    {
+        new Hairstyle { Name = "Afro Box Fade", Price = 50.00m, ImageUrl = "/MenHair/afro_box_fade.jpg" },
+        new Hairstyle { Name = "Afro Taper Fade with Waves", Price =60.00m, ImageUrl = "/MenHair/afro_taper_fade.jpg" },
+        new Hairstyle { Name = "Buzzcut", Price = 20.00m, ImageUrl = "/MenHair/buzz_cut.jpg" },
+        new Hairstyle { Name = "Chiskop", Price = 20.00m, ImageUrl = "/MenHair/bald.jpg" },
+        new Hairstyle { Name = "Clean Fade", Price = 40.00m, ImageUrl = "/MenHair/clean_fade.jpg" },
+        new Hairstyle { Name = "Fade", Price = 40.00m, ImageUrl = "/MenHair/fade.jpg" },
+        new Hairstyle { Name = "Frohawk", Price = 60.00m, ImageUrl = "/MenHair/afrohawk.jpg" },
+        new Hairstyle { Name = "Hightop Fade", Price = 40.00m, ImageUrl = "/MenHair/dreads_fade.jpg" },
+        new Hairstyle { Name = "Hightop Fade with Waves", Price = 60.00m, ImageUrl = "/MenHair/hightop_fade.jpg" },
+        new Hairstyle { Name = "Mohawk with Dye", Price = 70.00m, ImageUrl = "/MenHair/mohawk_dye.jpg" },
+        new Hairstyle { Name = "Short Buzz", Price = 40.00m, ImageUrl = "/MenHair/buzz2.jpg" },
+        new Hairstyle { Name = "Taper with Curls", Price = 60.00m, ImageUrl = "/MenHair/taper_fade.jpg" },
+    };
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="~/css/Style.css" />
+    <style>
+        body {
+            background-color: whitesmoke
+        }
+
+        .yellow-card {
+            background-color: #fdcc04;
+        }
+
+        h1{
+            text-align:center;
+            font-family:Arial;
+        }
+    </style>
+</head>
+
+<body>
+    </br>
+    </br>
+    <h1>Men's Hairstyles</h1>
+     <p style="text-align: center; font-family:Arial;">View the pricelist of our men hairstyles.</p>
+
+    <div class="row">
+        @foreach (var hairstyle in hairstyles)
+        {
+            <div class="col-md-4">
+                <div class="card mb-4 yellow-card">
+                    <img src="@Url.Content(hairstyle.ImageUrl)" class="card-img-top" alt="@hairstyle.Name">
+                    <div class="card-body">
+                        <h5 class="card-title">@hairstyle.Name</h5>
+                        <p class="card-text">Price: R @hairstyle.Price</p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</body>
+</html>

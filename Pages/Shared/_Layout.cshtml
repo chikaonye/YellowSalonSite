@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - YellowSalonWebsite</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/YellowSalonWebsite.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Yellow Salon</div>
+            <div class="nav-items">
+                <a href="/">Home</a>
+                <a href="#" onclick="showSignIn()">SignIn</a>
+                <a href="#" onclick="showSignUp()">SignUp</a>              
+                <a href="#" onclick="showBrowse()" >Browse Styles</a>
+                <a href="#" onclick="showOnline()">Online Salon</a>
+                <a href ="#" onclick="showAbout()">About</a>
+                <a href="#" onclick="showContact()">Contact</a>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2023 - YellowSalonWebsite - <a asp-area="" asp-page="/Privacy">Privacy</a>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    <script>
+        
+        function showContact(){
+            window.location.href="/ContactUs";
+        }
+        function showAbout() {
+            window.location.href = "/About";
+        }
+        function showBrowse() {
+            window.location.href = "/BrowseStyle";
+        }
+        function showOnline() {
+            window.location.href = "/Online Style";
+        }
+        function showSignIn() {
+            window.location.href = "/SignIn";
+        }
+        function showSignUp() {
+            window.location.href = "/SignUp";
+        }       
+    </script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

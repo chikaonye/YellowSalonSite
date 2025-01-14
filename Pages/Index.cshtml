@@ -1,0 +1,205 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="~/css/Style.css" />
+
+
+ 
+<style>
+* {
+  box-sizing:border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  padding: 64px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both
+}
+
+.column-66 {
+  float: left;
+  width: 66.66666%;
+  padding: 20px;
+}
+
+.column-33 {
+  float: left;
+  width: 33.33333%;
+  padding: 20px;
+}
+
+.large-font {
+  font-size: 48px;
+}
+
+.xlarge-font {
+  font-size: 64px
+}
+
+.button {
+  border: none;
+  color: white;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #fdcc04;
+}
+
+        #more {
+            display: none;
+        }
+
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+  img {
+    margin: auto;
+  }
+  
+        .container2 {
+            padding: 10px;
+           
+        }
+
+        input[type=text], input[type=submit] {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        input[type=checkbox] {
+            margin-top: 16px;
+        }
+
+        input[type=submit] {
+            background-color: #fdcc04;
+            color: white;
+            border: none;
+        }
+
+            input[type=submit]:hover {
+                opacity: 0.8;
+            }
+</style>
+
+    <img src="~/image2.png" alt="Image Description" height="400" width="1500" />
+
+</head>
+<body>
+
+<div style="text-align:center">
+  <h2>Welcome to the Yellow Salon</h2>
+  <p>Book your next style online and you won't have to stand in line ever again</p>
+</div>
+
+<!-- The App Section -->
+<div class="container">
+  <div class="row">
+    <div class="column-66">
+      <h1 class="xlarge-font"><b>Yellow Salon</b></h1>
+      <h1 class="large-font" style="color:#fdcc04;"><b>Get your hair & Nails done</b></h1>
+                <p><span style="font-size:36px">Look And Feel Your Best Now.</span> With Yellow Salon, a free online appointment booking app, you can manage your appointments from anywhere, with just a few clicks. Easily reschedule or cancel appointments without having to pick up the phone. Plus, we'll even send you reminders so you'll never miss another appointment again. Download Yellow Salon today and start taking control of your schedule with ease!.</p>
+                <!-- <button class="button">Download Application</button> -->
+    </div>
+    <div class="column-33">
+        <img src="/image00002.png" width="335" height="471" >
+    </div>
+  </div>
+</div>
+
+<!-- Clarity Section -->
+<div class="container" style="background-color:#f1f1f1">
+  <div class="row">
+    <div class="column-33">
+      <img src="/image00001.png" alt="App" width="335" height="471">
+    </div>
+    <div class="column-66">
+      <h1 class="xlarge-font"><b>Clarity</b></h1>
+      <h1 class="large-font" style="color:red;"><b>YellowSalon, who?</b></h1>
+                <p><span style="font-size:24px">A revolution in resolution.</span> Want to discover the top health and beauty businesses in your area? Look no further than YellowSalon's marketplace.YellowSalon is a convenient beauty scheduling app that makes it easy to find and book appointments with local barbers, hairdressers, estheticians, yoga instructors, therapists, and more.<span id="dots">...</span><span id="more"> With YellowSalon, you can browse through their profiles, read real reviews from verified customers, and even check out their work through their portfolios. Plus, it only takes a few minutes to set up an appointment with YellowSalon, and there are no fees or hidden charges. So why stress about your next beauty appointment when yellowSalon makes it so easy.</span></p>
+                <button onclick="myFunction()" id="myBtn" class="button" style="background-color:red">Read More</button>
+    </div>
+  </div>
+</div>
+
+<!-- The App Section -->
+    <div class="container">
+        <div class="row">
+            <div class="column-66">
+                <h1 class="xlarge-font"><b>The App</b></h1>
+                <h1 class="large-font" style="color:#fdcc04;"><b>Why Get it?</b></h1>
+                <p><span style="font-size:36px">Book Your Next style Online.</span>Are you in need of an appointment with your barber, hairstyle, massage therapist, or nail artist? Need to book an appointment for your next beard trim, eyebrow wax, or deep tissue massage? Look no further than Yellow, a user-friendly beauty scheduling app available 24/7 that makes it easy to find and book appointments in seconds. Say goodbye to phone tag! With YellowSalon, you can schedule anytime, from anywhere, within minutes. .</p>
+                <button class="button">Get Application Now</button>
+            </div>
+            <div class="column-33">
+                <img src="/image00003.png" width="335" height="471">
+            </div>
+        </div>
+    </div>
+<div>
+        <form action="/action_page.php">
+            <div class="container2">
+                <h2>Subscribe to our Newsletter</h2>
+                <p>Subcribe to stay updated with news about the latest hairstyles, updates of our app and features and ways to be part of YellowSalon.</p>
+            </div>
+            <div class="container2" style="background-color:white">
+                <input type="text" placeholder="Name" name="name" required>
+                <input type="text" placeholder="Email address" name="mail" required>
+                <label>
+                    <input type="checkbox" checked="checked" name="subscribe"> Daily Newsletter
+                </label>
+            </div>
+
+            <div class="container2">
+                <input type="submit" value="Subscribe">
+            </div>
+        </form>
+    </div>
+    <br />
+    <br/>
+    <br />
+    <br />
+
+    <script>
+        function myFunction() {
+            var dots = document.getElementById("dots");
+            var moreText = document.getElementById("more");
+            var btnText = document.getElementById("myBtn");
+
+            if (dots.style.display === "none") {
+                dots.style.display = "inline";
+                btnText.innerHTML = "Read more";
+                moreText.style.display = "none";
+            } else {
+                dots.style.display = "none";
+                btnText.innerHTML = "Read less";
+                moreText.style.display = "inline";
+            }
+        }
+    </script>
+</body>
+</html>
